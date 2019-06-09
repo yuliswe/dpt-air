@@ -42,3 +42,14 @@ a img {
 sup, sub {
     line-height: 0;
 }
+
+.left {
+    float: left;
+}
+
+hr {
+    width: 90%;
+    margin: 4em auto;
+    border-color: #fefefe;
+    opacity: 0.5;
+}

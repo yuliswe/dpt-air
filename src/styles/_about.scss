@@ -7,27 +7,65 @@
   }
 }
 
+img.app-icon {
+  vertical-align: text-top;
+}
+
 .tech {
   margin: 10px;
 }
 
 .user {
+  @media only screen and (min-width: $cut) {
+    font-size: 75px;
+  }
   text-align: center;
   font-size: 60px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   p {
     font-size: 16px;
-  }
-  @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
-    font-size: 75px;
   }
 }
 
 .user-details {
   text-align: center;
   margin: 5px auto;
+}
+
+.download-details {
+  .dpt-imgs {
+    display: inline-block;
+  }
+  ul.download-links {
+    display: inline-block;
+    vertical-align: top;
+    list-style-type: none;
+    @media only screen and (max-width: $cut) {
+      padding-left: 0;
+    }
+    li {
+      text-align: left;
+    }
+    .link {
+      padding: 0.5em 2em;
+      margin: 1em 0;
+      background-color: #eee;
+      border-radius: 3px;
+    }
+    .link:hover {
+      background-color: darkorange;
+      a {
+        color: white;
+        
+      }
+    }
+    a {
+      text-decoration: none;
+      font-size: 0.9em;
+      color: #555;
+    }
+  }
 }
