@@ -33,7 +33,7 @@ gulp.task('jekyll-rebuild', gulp.series(['jekyll-build'], function (done) {
 gulp.task('browser-sync', gulp.series(['jekyll-build'], function(done) {
 	browserSync({
 		server: {
-			baseDir: '_site'
+			baseDir: 'docs'
 		}
 	});
 	done()
