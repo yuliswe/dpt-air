@@ -15,7 +15,7 @@ var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
  * runs a child process in node that runs the jekyll commands
  */
 gulp.task('jekyll-build', function (done) {
-	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
+	return cp.spawn(jekyllCommand, ['build', '-d', 'docs'], {stdio: 'inherit'})
 		.on('close', done);
 });
 
@@ -33,7 +33,7 @@ gulp.task('jekyll-rebuild', gulp.series(['jekyll-build'], function (done) {
 gulp.task('browser-sync', gulp.series(['jekyll-build'], function(done) {
 	browserSync({
 		server: {
-			baseDir: '_site'
+			baseDir: 'docs'
 		}
 	});
 	done()
